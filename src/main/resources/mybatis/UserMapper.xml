@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zr.common.mapper.UserMapper">
+
+    <select id="selectAllUser" parameterType="com.zr.common.entity.User" resultType="com.zr.common.entity.User">
+        SELECT *
+        FROM tb_user
+    </select>
+    <select id="selectUserByName" parameterType="string" resultType="com.zr.common.entity.User">
+        SELECT *
+        FROM  tb_user
+        WHERE name=#{name}
+    </select>
+</mapper>

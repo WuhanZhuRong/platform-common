@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zr.common.mapper.CollageMapper">
+
+    <select id="sleectAllCollage" parameterType="com.zr.common.entity.Collage" resultType="com.zr.common.entity.Collage">
+        SELECT *
+        FROM Collage
+    </select>
+    <select id="selectCollageByCollageNum" parameterType="com.zr.common.entity.Collage" resultType="com.zr.common.entity.Collage">
+        SELECT *
+        FROM Collage
+        WHERE collagenum=#{collagenum}
+    </select>
+    <select id="selectCollageByLikeName" parameterType="com.zr.common.entity.Collage" resultType="com.zr.common.entity.Collage">
+        SELECT *
+        FROM Collage
+        WHERE collagename LIKE "%"#{collagename}"%"
+    </select>
+
+</mapper>
